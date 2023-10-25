@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PostsSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PostsSite.styles.css" asp-append-version="true" />
+    
+  
+   </head>
+<body class="body-pd">
+
+ 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3" style="   height: 100%;">
+                <div class="flex-shrink-0 p-3 sidebar" style="">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                        <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                        <span class="fs-5 fw-semibold"></span>
+                    </a>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed  " data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                              Главная
+                            </button>
+                            <div class="collapse show" id="home-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">ОБзор</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Все пост</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                              Информация
+                            </button>
+                            <div class="collapse" id="dashboard-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Блог</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Контактыi</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Поддержка</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">О нас</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                     
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                               Профиль
+                            </button>
+                            <div class="collapse" id="account-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Мой профиль</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Настройки</a></li>
+                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Выход</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="container ml-5>
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
+            </div>
+        </div>
+
+    </div>
+ 
+
+   
+    <script>
+   
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.csss"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

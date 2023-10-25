@@ -1,0 +1,44 @@
+﻿@using PostsSite.Mocks;
+@model IPostService
+@{
+    ViewData["Title"] = "Post Page";
+}
+<div class="text-center">
+    <div class="mb-3 d-flex justify-content-between align-content-center align-items-center">
+        <h4 class="display-4">Posts</h4>
+        <a asp-controller="Post" asp-action="Create">
+            Add post
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+         
+                    @{
+                        foreach (var item in Model.Posts)
+                        {
+
+                            <div class=" col-md-8 mt-3 offset-2">
+                                <div class="card ">
+                                    <div class="card-header">
+                                        @item.title
+                                    </div>
+                                    <div class="card-body">
+                                        @item.description
+                                    </div>
+                                    <div class="card-footer">
+                                        @item.author - @item.created
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    }
+          
+          
+      
+        </div>
+    </div>
+</div>
+
+

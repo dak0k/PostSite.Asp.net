@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Create Page";
+}
+<div class="container">
+    <div class="mb-3 ">
+        <h4>
+            Creating post
+        </h4>
+    </div>
+    <form method="post" asp-controller="Post" asp-action="Store" enctype="multipart/form-data">
+        <div class="row">
+            <div class="mb-3">
+                <div class="col-md-12">
+                    <label class="text-black">
+                        Author
+                    </label>
+                    <input type="text" name="author" class="form-control" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-md-12">
+                    <label class="text-black">
+                        Title
+                    </label>
+                    <input type="text" name="title" class="form-control" />
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-md-12">
+                    <label class="text-black">
+                        Description
+                    </label>
+                    <textarea name="description" class="form-control" rows="15">
+
+                    </textarea>
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary " value="Create" />
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.list-unstyled {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    .list-unstyled li {
+        margin-bottom: 8px;
+    }
+
+.sidebar {
+    border-right: 1px solid #dee2e6 !important;
+    background-color: #acdfe6;
+    margin: auto;
+    margin-left: -12px;
+    height: 100%;
+    position: absolute;
+}
